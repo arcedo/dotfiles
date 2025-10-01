@@ -1,19 +1,27 @@
+/**
+ *
+ * Author : Aditya Shakya (adi1090x)
+ * Github : @adi1090x
+ *
+ * Rofi Theme File
+ * Rofi Version: 1.7.3
+ **/
 
 /*****----- Configuration -----*****/
 configuration {
 	modi:                       "drun,run,filebrowser,window";
-    show-icons:                 false;
-    display-drun:               " ";
-    display-run:                " ";
-    display-filebrowser:        " ";
-    display-window:             " ";
+    show-icons:                 true;
+    display-drun:               "A";
+    display-run:                "R";
+    display-filebrowser:        "F";
+    display-window:             "W";
 	drun-display-format:        "{name}";
 	window-format:              "{w} · {c} · {t}";
 }
 
 /*****----- Global Properties -----*****/
-@import                          "~/.config/waybar/scripts/network/colors.rasi"
-@import                          "~/.config/rofi/fonts.rasi"
+@import                          "shared/colors.rasi"
+@import                          "shared/fonts.rasi"
 
 * {
     border-colour:               var(selected);
@@ -45,20 +53,20 @@ configuration {
 window {
     /* properties for window widget */
     transparency:                "real";
-    location:                    north east;
-    anchor:                      north east;
+    location:                    center;
+    anchor:                      center;
     fullscreen:                  false;
-    width:                       400px;
-    x-offset:                    -30px;
-    y-offset:                    60px;
+    width:                       600px;
+    x-offset:                    0px;
+    y-offset:                    0px;
 
     /* properties for all widgets */
     enabled:                     true;
     margin:                      0px;
     padding:                     0px;
-    border:                      0px solid;
+    border:                      1px solid;
     border-radius:               10px;
-    border-color:                @border-colour;
+    border-color:                @active;
     cursor:                      "default";
     /* Backgroud Colors */
     background-color:            @background-colour;
@@ -106,7 +114,8 @@ prompt {
 }
 textbox-prompt-colon {
     enabled:                     true;
-    padding:                     5px 0px;
+    padding:                     5px 14px;
+    width:                       35px;
     expand:                      false;
     str:                         "";
     background-color:            inherit;
@@ -158,7 +167,7 @@ listview {
     reverse:                     false;
     fixed-height:                true;
     fixed-columns:               true;
-    
+
     spacing:                     5px;
     margin:                      0px;
     padding:                     0px;
@@ -170,7 +179,7 @@ listview {
     cursor:                      "default";
 }
 scrollbar {
-    handle-width:                3px ;
+    handle-width:                5px ;
     handle-color:                @handle-colour;
     border-radius:               10px;
     background-color:            @alternate-background;
@@ -182,9 +191,9 @@ element {
     spacing:                     10px;
     margin:                      0px;
     padding:                     5px 10px;
-    border:                      0px solid;
+    border:                      1px solid;
     border-radius:               10px;
-    border-color:                @border-colour;
+    border-color:                @border-list;
     background-color:            transparent;
     text-color:                  @foreground-colour;
     cursor:                      pointer;
@@ -243,7 +252,7 @@ element-text {
 /*****----- Mode Switcher -----*****/
 mode-switcher{
     enabled:                     true;
-    spacing:                     10px;
+    spacing:                     5px;
     margin:                      0px;
     padding:                     0px;
     border:                      0px solid;
@@ -253,16 +262,19 @@ mode-switcher{
     text-color:                  @foreground-colour;
 }
 button {
-    padding:                     5px 10px;
-    border:                      0px solid;
-    border-radius:               10px;
-    border-color:                @border-colour;
+    //padding:                     0px 10px;
+    border:                      1px solid;
+    width:                       30px;
+    height:                      25px;
+    expand:                      false;
+    border-radius:               100px;
+    border-color:                @border-list;
     background-color:            @alternate-background;
     text-color:                  inherit;
     cursor:                      pointer;
 }
 button selected {
-    background-color:            var(selected-normal-background);
+    background-color:            @selected-mode;
     text-color:                  var(selected-normal-foreground);
 }
 
@@ -299,5 +311,3 @@ error-message {
     background-color:            @background-colour;
     text-color:                  @foreground-colour;
 }
-
-

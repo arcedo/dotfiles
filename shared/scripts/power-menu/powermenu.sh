@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # Current Theme
-dir="~/.config/waybar/scripts/power-menu/"
+dir="~/shared/scripts/power-menu/"
 theme='style'
 
 # CMDs
@@ -12,8 +12,8 @@ host=`hostname`
 shutdown=''
 reboot=''
 lock=''
-suspend=''
-logout=''
+suspend='󰒲'
+logout=''
 yes=''
 no=''
 
@@ -45,7 +45,7 @@ confirm_exit() {
 
 # Pass variables to rofi dmenu
 run_rofi() {
-	echo -e "$lock\n$suspend\n$logout\n$reboot\n$shutdown" | rofi_cmd
+	echo -e "$lock\n$shutdown\n$reboot\n$suspend\n$logout" | rofi_cmd
 }
 
 # Execute Command

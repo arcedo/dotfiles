@@ -1,0 +1,50 @@
+# Appearance
+background-color=#24283bEE
+text-color=#c0caf5
+border-color=#9aa5ce70
+border-radius=8
+border-size=1
+width=340
+height=100
+margin=5
+padding=10
+
+# Font
+font=Montserrat 10
+
+# Position
+anchor=top-right
+layer=overlay
+
+# Behavior
+ignore-timeout=1
+max-visible=5
+
+# Icons
+icons=1
+max-icon-size=48
+icon-path=/usr/share/icons/Papirus:/usr/share/icons/hicolor
+
+# Grouping
+group-by=app-name
+max-history=20
+
+# Actions
+actions=1
+
+# Progress bar
+progress-color=source #7aa2f7
+
+# Format
+format=<b>%s</b>\n%b
+
+[urgency=low]
+default-timeout=3000
+
+[urgency=normal]
+default-timeout=5000
+
+[urgency=critical]
+text-color=#ff9e64
+border-color=#ff9e64
+default-timeout=0

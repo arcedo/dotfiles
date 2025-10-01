@@ -3,7 +3,7 @@
     "layer": "top", // Waybar at top layer
     "modules-left": ["custom/launcher", "cpu", "memory", "clock"],
     "modules-center": ["hyprland/workspaces"],
-    "modules-right": ["tray", "bluetooth", "network", "pulseaudio", "battery", "backlight", "custom/power-menu"],
+    "modules-right": ["tray", "bluetooth", "network", "pulseaudio", "battery", "backlight"],
     "hyprland/workspaces": {
       "disable-scroll": true,
       "all-outputs": true,
@@ -48,7 +48,7 @@
         "format-ethernet": "",
         "format-disconnected": "󰤮",
         "tooltip-format": "{essid}",
-        "on-click": "~/.config/waybar/scripts/network/rofi-network-manager.sh",
+        "on-click": "~/shared/scripts/network/rofi-network-manager.sh",
         "format-icons": ["󰤯","󰤟","󰤢","󰤥","󰤨"],
     },
 
@@ -71,16 +71,13 @@
       },
       "max-length": 20,
       "format": "{capacity}% {icon}",
-      "format-warning": "{icon}",
-      "format-critical": "{icon}",
       "format-charging": "",
-      "format-alt": "{icon} {time}",
       "format-full": "󰁹",
       "format-icons": ["", "", "", ""]
     },
     "custom/power-menu": {
         "format": "⏻",
-        "on-click": "bash ~/.config/waybar/scripts/power-menu/powermenu.sh &",
+        "on-click": "~/shared/scripts/power-menu/powermenu.sh",
     },
     "custom/launcher": {
         "format": "",
@@ -88,14 +85,14 @@
     },
     "custom/bluetooth": {
         "format": "{}",
-        "exec": "~/.config/waybar/scripts/rofi-bluetooth.sh --status",
-        "on-click": "~/.config/waybar/scripts/rofi-bluetooth.sh",
+        "exec": "~/shared/scripts/rofi-bluetooth.sh --status",
+        "on-click": "~/shared/scripts/rofi-bluetooth.sh",
         "interval": 30,
         "tooltip": false
     },
     "bluetooth": {
         "format": "",
-        "on-click": "~/.config/waybar/scripts/rofi-bluetooth.sh",
+        "on-click": "~/shared/scripts/rofi-bluetooth.sh",
         "tooltip": true,
         "tooltip-format": "Bluetooth: {status}",
         "tooltip-format-connected": "Connected to:\n{device_enumerate}",
@@ -103,7 +100,7 @@
     },
     // unused custom modules
     "custom/weather": {
-      "exec": "python3 ~/.config/waybar/scripts/weather.py",
+      "exec": "python3 ~/shared/scripts/weather.py",
       "restart-interval": 300,
       "return-type": "json",
     },
@@ -113,7 +110,7 @@
        "format" : "",
     },
    "custom/spotify": {
-        "exec": "python3 ~/.config/waybar/scripts/mediaplayer.py --player spotify",
+        "exec": "python3 ~/shared/scripts/mediaplayer.py --player spotify",
         "format": " ·{}",
         "return-type": "json",
         "on-click": "playerctl play-pause",

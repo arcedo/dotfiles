@@ -1,0 +1,10 @@
+* {
+    background:     #24283bEE;
+    background-alt: #414868FF;
+    foreground:     #C0CAF5FF;
+    selected:       #7AA2F7FF;
+    selected-mode:  #9ECE6AFF;
+    active:         rgba(192, 202, 245, 0.1);
+    urgent:         #FF9E64FF;
+    border-list:    #C0CAF522;
+}
