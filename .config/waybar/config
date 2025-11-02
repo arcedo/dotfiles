@@ -3,7 +3,7 @@
     "layer": "top", // Waybar at top layer
     "modules-left": ["custom/launcher", "cpu", "memory", "clock"],
     "modules-center": ["hyprland/workspaces"],
-    "modules-right": ["tray", "bluetooth", "network", "pulseaudio", "battery", "backlight"],
+    "modules-right": ["tray", "pulseaudio", "battery", "backlight"],
     "hyprland/workspaces": {
       "disable-scroll": true,
       "all-outputs": true,
@@ -11,8 +11,8 @@
       "format-icons": {
         "urgent": "",
         "active": "",
-        "default": "",
-      },
+        "default": ""
+      }
     },
     "hyprland/window": {
         "format": "{}"
@@ -21,37 +21,28 @@
         "spacing": 10
     },
     "clock": {
-        "format": "{:%a %d %H:%M}",
-        "tooltip-format": "<tt>{calendar}</tt>",
+        "format": "{:%a %d · %H:%M}",
+        "tooltip-format": "<tt>{calendar}</tt>"
     },
 
     "cpu": {
       "interval": 10,
       "format": "󰍛  {}%",
       "max-length": 10,
-      "on-click": "",
+      "on-click": ""
     },
     "memory": {
         "interval": 30,
         "format": "   {}%",
         "format-alt":"   {used:0.1f}GB",
-        "max-length": 10,
+        "max-length": 10
     },
     "backlight": {
         "device": "eDP-1",
         "format": "{icon}",
         "tooltip-format": "{percent}",
-        "format-icons": ["󱩎 ", "󱩏 ", "󱩐 ", "󱩑 ", "󱩒 ", "󱩓 ", "󱩔 ", "󱩕 ", "󱩖 ", "󰛨 "],
+        "format-icons": ["󱩎 ", "󱩏 ", "󱩐 ", "󱩑 ", "󱩒 ", "󱩓 ", "󱩔 ", "󱩕 ", "󱩖 ", "󰛨 "]
     },
-    "network": {
-        "format-wifi": "{ipaddr} {icon}",
-        "format-ethernet": "",
-        "format-disconnected": "󰤮",
-        "tooltip-format": "{essid}",
-        "on-click": "~/shared/scripts/network/rofi-network-manager.sh",
-        "format-icons": ["󰤯","󰤟","󰤢","󰤥","󰤨"],
-    },
-
     "pulseaudio": {
         "format": "{volume}% {icon}",
         "format-muted": "",
@@ -75,13 +66,18 @@
       "format-full": "󰁹",
       "format-icons": ["", "", "", ""]
     },
-    "custom/power-menu": {
-        "format": "⏻",
-        "on-click": "~/shared/scripts/power-menu/powermenu.sh",
-    },
     "custom/launcher": {
         "format": "",
-        "on-click": "rofi -show drun &",
+        "on-click": "rofi -show drun &"
+    },
+    // unused custom modules
+    "network": {
+        "format-wifi": "{ipaddr} {icon}",
+        "format-ethernet": "",
+        "format-disconnected": "󰤮",
+        "tooltip-format": "{essid}",
+        "on-click": "~/shared/scripts/network/rofi-network-manager.sh",
+        "format-icons": ["󰤯","󰤟","󰤢","󰤥","󰤨"]
     },
     "custom/bluetooth": {
         "format": "{}",
@@ -96,18 +92,21 @@
         "tooltip": true,
         "tooltip-format": "Bluetooth: {status}",
         "tooltip-format-connected": "Connected to:\n{device_enumerate}",
-        "tooltip-format-enumerate-connected": "• {device_alias}",
+        "tooltip-format-enumerate-connected": "• {device_alias}"
     },
-    // unused custom modules
+    "custom/power-menu": {
+      "format": "⏻",
+      "on-click": "~/shared/scripts/power-menu/powermenu.sh"
+    },
     "custom/weather": {
       "exec": "python3 ~/shared/scripts/weather.py",
       "restart-interval": 300,
-      "return-type": "json",
+      "return-type": "json"
     },
    "custom/lock": {
        "tooltip" : false,
        "on-click": "swaylock",
-       "format" : "",
+       "format" : ""
     },
    "custom/spotify": {
         "exec": "python3 ~/shared/scripts/mediaplayer.py --player spotify",
@@ -115,6 +114,6 @@
         "return-type": "json",
         "on-click": "playerctl play-pause",
         "on-double-click-right": "playerctl next",
-        "on-scroll-down": "playerctl previous",
-    },
+        "on-scroll-down": "playerctl previous"
+    }
 }

@@ -1,27 +1,27 @@
 * {
-    /* `otf-font-awesome` is required to be installed for icons */
-    font-family:
-        "Montserrat",
-        Material Design Icons,
-        JetBrainsMono Nerd Font,
-        Iosevka Nerd Font;
-    font-size: 14px;
-    font-weight: 500;
+  /* `otf-font-awesome` is required to be installed for icons */
+  font-family:
+    "Montserrat",
+    Material Design Icons,
+    JetBrainsMono Nerd Font,
+    Iosevka Nerd Font;
+  font-size: 14px;
+  font-weight: 500;
 }
 
 window#waybar {
-    background-color: rgba(26, 27, 38, 0);
-    color: #c0caf5;
-    transition-property: background-color;
-    transition-duration: 0.5s;
+  background-color: rgba(26, 27, 38, 0);
+  color: #c0caf5;
+  transition-property: background-color;
+  transition-duration: 0.5s;
 }
 
 window#waybar.hidden {
-    opacity: 0.1;
+  opacity: 0.1;
 }
 
 #window {
-    color: #c0caf5;
+  color: #c0caf5;
 }
 
 #clock,
@@ -36,46 +36,46 @@ window#waybar.hidden {
 #custom-power-menu,
 #custom-launcher,
 #custom-spotify {
-    color: #c0caf5;
-    padding: 5px 10px;
-    background-color: rgba(36, 40, 59, 0.8);
-    border-radius: 100px;
-    margin: 5px 5px 2px 5px;
-    border: 1px solid rgba(192, 202, 245, 0.1);
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    min-height: 20px;
+  color: #c0caf5;
+  padding: 5px 10px;
+  background-color: rgba(36, 40, 59, 0.8);
+  border-radius: 100px;
+  margin: 5px 5px 2px 5px;
+  border: 1px solid rgba(192, 202, 245, 0.1);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  min-height: 20px;
 }
 
 #cpu {
-    color: #7aa2f7;
+  color: #7aa2f7;
 }
 
 #memory {
-    color: #bb9af7;
+  color: #bb9af7;
 }
 
 #workspaces {
-    padding-left: 4.5px;
+  padding-left: 4.5px;
 }
 
 #workspaces button {
-    box-shadow: inset 0 -3px transparent;
-    padding: 0 2.5px;
-    /*transition: all 0.5s cubic-bezier(0.55, -0.68, 0.48, 1.68); We can do transitions*/
+  box-shadow: inset 0 -3px transparent;
+  padding: 0 2.5px;
+  /*transition: all 0.5s cubic-bezier(0.55, -0.68, 0.48, 1.68); We can do transitions*/
 }
 
 #workspaces button.active {
-    color: #73daca;
+  color: #73daca;
 }
 
 #workspaces button.urgent {
-    color: #ff9e64;
+  color: #ff9e64;
 }
 
 #custom-launcher {
-    padding-right: 13px;
-    padding-left: 13px;
-    font-size: 1.5em;
+  padding-right: 13px;
+  padding-left: 13px;
+  font-size: 1.5em;
 }
 
 #backlight,
@@ -83,125 +83,125 @@ window#waybar.hidden {
 #pulseaudio,
 #network,
 #bluetooth {
-    background-color: rgba(36, 40, 59, 0.8);
-    padding: 0 8px;
+  background-color: rgba(36, 40, 59, 0.8);
+  padding: 0 8px;
 
-    margin: 5px 0 2px 0;
+  margin: 5px 0 2px 0;
 
-    min-height: 20px;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    border: 1px solid rgba(192, 202, 245, 0.1);
-    border-right: none;
-    border-left: none;
+  min-height: 20px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(192, 202, 245, 0.1);
+  border-right: none;
+  border-left: none;
 }
 
 #pulseaudio {
 }
 
 #pulseaudio.muted {
-    color: #7dcfff;
+  color: #7dcfff;
 }
 
-#bluetooth {
-    border-radius: 100px 0px 0px 100px;
-    border: 1px solid rgba(192, 202, 245, 0.1);
-    border-right: none;
-    margin-left: 5px;
-    padding-left: 12px;
-    padding-right: 5px;
+#pulseaudio {
+  border-radius: 100px 0px 0px 100px;
+  border: 1px solid rgba(192, 202, 245, 0.1);
+  border-right: none;
+  margin-left: 5px;
+  padding-left: 14px;
+  padding-right: 10px;
 }
 
 #bluetooth.disabled {
-    color: #565f89;
+  color: #565f89;
 }
 
 #bluetooth.connected {
-    color: #7dcfff;
+  color: #7dcfff;
 }
 
 #network.disconnected {
-    color: #ff9e64;
+  color: #ff9e64;
 }
 
 #backlight {
-    border-radius: 0px 100px 100px 0px;
-    border: 1px solid rgba(192, 202, 245, 0.1);
-    border-left: none;
-    margin-right: 5px;
-    padding-right: 10px;
+  border-radius: 0px 100px 100px 0px;
+  border: 1px solid rgba(192, 202, 245, 0.1);
+  border-left: none;
+  margin-right: 5px;
+  padding-right: 10px;
 }
 
 #battery {
-    padding-right: 13px;
+  padding-right: 13px;
 }
 
 #battery.critical:not(.charging) {
-    color: #f7768e;
+  color: #f7768e;
 }
 
 #battery.warning {
-    color: #cfc9c2;
+  color: #cfc9c2;
 }
 
 #battery.full,
 #battery.plugged,
 #battery.charging {
-    padding-right: 5px;
-    color: #9ece6a;
+  padding-right: 5px;
+  color: #9ece6a;
 }
 
 #clock {
 }
 
 #custom-power-menu {
-    padding: 0 17.5px 0 14;
+  padding: 0 17.5px 0 14;
 }
 
 tooltip {
-    border-radius: 12px;
-    background-color: rgba(41, 48, 68, 0.8);
-    border: 1px solid rgba(154, 165, 206, 0.5);
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  background-color: rgba(41, 48, 68, 0.8);
+  border: 1px solid rgba(154, 165, 206, 0.5);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 }
 
 tooltip label {
-    font-family: "Montserrat";
-    font-size: 14px;
-    font-weight: 500;
-    padding: 2.5px 5px;
-    color: #c0caf5;
+  font-family: "Montserrat";
+  font-size: 14px;
+  font-weight: 500;
+  padding: 2.5px 5px;
+  color: #c0caf5;
 }
 
 label:focus {
-    background-color: #1f232b;
+  background-color: #1f232b;
 }
 
 #tray {
 }
 
 #tray > .passive {
-    -gtk-icon-effect: dim;
+  -gtk-icon-effect: dim;
 }
 
 #tray > .needs-attention {
-    -gtk-icon-effect: highlight;
-    background-color: rgba(30, 34, 42, 0.5);
+  -gtk-icon-effect: highlight;
+  background-color: rgba(30, 34, 42, 0.5);
 }
 
 #idle_inhibitor {
-    background-color: #242933;
+  background-color: #242933;
 }
 
 #idle_inhibitor.activated {
-    background-color: #ecf0f1;
-    color: #2d3436;
+  background-color: #ecf0f1;
+  color: #2d3436;
 }
 
 #custom-spotify {
-    color: #abb2bf;
+  color: #abb2bf;
 }
 
 #custom-lock {
-    color: #ecd3a0;
-    padding: 0 15px 0 15px;
+  color: #ecd3a0;
+  padding: 0 15px 0 15px;
 }
