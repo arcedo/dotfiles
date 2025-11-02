@@ -7,14 +7,8 @@ They include my terminal, IDE, and shell setup, everything I use to get my envir
 
 Before using this dotfiles setup, make sure you have these packages installed:
 
-### Shell & Plugins
-
-- `zsh` — your shell
-- `git` — used to clone this repo and plugins
-
 ### Desktop Environment
-
-- `hyprland` — Wayland compositor
+- `hyprland` — window manager
 - `waybar` — status bar
 - `mako` — notification daemon
 - `rofi` — application launcher
@@ -24,10 +18,12 @@ Before using this dotfiles setup, make sure you have these packages installed:
 ### Terminal & IDE
 
 - `kitty` — terminal emulator
+- `zsh` - shell
 - `neovim` — text editor
 
 ### Other Tools
 
+- `git` - version control system 🙃
 - `imagemagick` — for wallpapers (`magick` command)
 - `docker` — optional, used in `.zshrc`
 - `pnpm` — optional, Node.js package manager
