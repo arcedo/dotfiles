@@ -39,7 +39,7 @@ Before using this dotfiles setup, make sure you have these packages installed:
 ```bash
 sudo pacman -Syu \
   zsh git neovim kitty rofi mako imagemagick \
-  network-manager-applet blueman hyprland way
+  network-manager-applet blueman hyprland waybar
 ```
 
 --
