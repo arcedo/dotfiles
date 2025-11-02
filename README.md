@@ -9,6 +9,9 @@ Before using this dotfiles setup, make sure you have these packages installed:
 
 ### Desktop Environment
 - `hyprland` — window manager
+- `hyprpaper` — wallpaper daemon
+- `hypridle` — idle daemon (for screen timeout / suspend)
+- `hyprlock` — lock screen daemon
 - `waybar` — status bar
 - `mako` — notification daemon
 - `rofi` — application launcher
@@ -35,7 +38,7 @@ Before using this dotfiles setup, make sure you have these packages installed:
 ```bash
 sudo pacman -Syu \
   zsh git neovim kitty rofi mako imagemagick \
-  network-manager-applet blueman hyprland waybar
+  network-manager-applet blueman hyprland waybar hyprpaper hypridle hyprlock
 ```
 
 --
