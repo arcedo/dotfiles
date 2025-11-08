@@ -1,7 +1,7 @@
 # My Dotfiles
 
 This repository contains my personal dotfiles and Neovim configuration.  
-They include my terminal, IDE, and shell setup, everything I use to get my environment running quickly on a new system.
+They include my terminal, text editor and shell setup, everything I use to get my environment running quickly on a new system.
 
 ## Dependencies
 
@@ -18,7 +18,7 @@ Before using this dotfiles setup, make sure you have these packages installed:
 - `network-manager-applet` — system tray applet for Wi-Fi/Ethernet
 - `blueman` — Bluetooth manager (includes `blueman-applet`)
 
-### Terminal & IDE
+### Terminal & Text editor
 
 - `kitty` — terminal emulator
 - `zsh` - shell
