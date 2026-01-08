@@ -15,10 +15,12 @@ font=Montserrat 10
 # Position
 anchor=top-right
 layer=overlay
+margin=8 
 
 # Behavior
 ignore-timeout=1
-max-visible=5
+max-visible=10
+default-timeout=5000
 
 # Icons
 icons=1

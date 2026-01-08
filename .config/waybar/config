@@ -62,7 +62,7 @@
       },
       "max-length": 20,
       "format": "{capacity}% {icon}",
-      "format-charging": "",
+      "format-charging": "{capacity}% ",
       "format-full": "󰁹",
       "format-icons": ["", "", "", ""]
     },
