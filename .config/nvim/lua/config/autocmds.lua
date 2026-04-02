@@ -13,3 +13,13 @@ vim.api.nvim_create_autocmd("BufWritePre", {
     require("conform").format({ timeout_ms = 500, lsp_fallback = true })
   end,
 })
+
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = "c",
+  callback = function()
+    vim.bo.tabstop = 4
+    vim.bo.shiftwidth = 4
+    vim.bo.softtabstop = 4
+    vim.bo.expandtab = true
+  end,
+})

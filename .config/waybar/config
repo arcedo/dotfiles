@@ -21,8 +21,9 @@
         "spacing": 10
     },
     "clock": {
-        "format": "{:%a %d · %H:%M}",
-        "tooltip-format": "<tt>{calendar}</tt>"
+        "format": "{:%a %d · %H:%M:%S}",
+        "tooltip-format": "<tt>{calendar}</tt>",
+        "interval": 1
     },
 
     "cpu": {
@@ -39,7 +40,7 @@
     },
     "backlight": {
         "device": "eDP-1",
-        "format": "{icon}",
+        "format": "{percent}% {icon}",
         "tooltip-format": "{percent}",
         "format-icons": ["󱩎 ", "󱩏 ", "󱩐 ", "󱩑 ", "󱩒 ", "󱩓 ", "󱩔 ", "󱩕 ", "󱩖 ", "󰛨 "]
     },
