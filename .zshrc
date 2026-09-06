@@ -56,3 +56,6 @@ esac
 if [[ $- == *i* ]]; then
     fastfetch
 fi
+
+# opencode
+export PATH=/home/arcedo/.opencode/bin:$PATH

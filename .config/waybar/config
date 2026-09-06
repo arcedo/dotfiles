@@ -1,9 +1,10 @@
 {
     "height": 30, // Waybar height (to be removed for auto height)
     "layer": "top", // Waybar at top layer
-    "modules-left": ["custom/launcher", "cpu", "memory", "clock"],
-    "modules-center": ["hyprland/workspaces"],
+    "modules-left": ["clock"],
+    "modules-center": [],
     "modules-right": ["tray", "pulseaudio", "battery", "backlight"],
+
     "hyprland/workspaces": {
       "disable-scroll": true,
       "all-outputs": true,

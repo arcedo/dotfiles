@@ -2,7 +2,7 @@
 background-color=#24283bEE
 text-color=#c0caf5
 border-color=#9aa5ce70
-border-radius=8
+border-radius=0
 border-size=1
 width=340
 height=100
@@ -10,7 +10,7 @@ margin=5
 padding=10
 
 # Font
-font=Montserrat 10
+font=Funnel Sans 10
 
 # Position
 anchor=top-right

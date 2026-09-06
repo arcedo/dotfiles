@@ -65,7 +65,7 @@ window {
     margin:                      0px;
     padding:                     0px;
     border:                      1px solid;
-    border-radius:               10px;
+    border-radius:               0px;
     border-color:                @active;
     cursor:                      "default";
     /* Backgroud Colors */
