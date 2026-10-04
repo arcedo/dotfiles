@@ -53,9 +53,15 @@ esac
 # pnpm end
 
 # fastfetch
-if [[ $- == *i* ]]; then
-    fastfetch
-fi
+#if [[ $- == *i* ]]; then
+#    fastfetch
+#fi
 
 # opencode
 export PATH=/home/arcedo/.opencode/bin:$PATH
+
+# Aliases
+alias projects='cd ~/Documents/projects/'
+alias dotfiles='cd ~/Documents/dotfiles/'
+alias academic='cd ~/Documents/academic/'
+alias cs-sep-26='cd ~/Documents/academic/enginyeria_informatica/uoc/sep_2026/'

@@ -27,7 +27,7 @@ window {
     location:                    center;
     anchor:                      center;
     fullscreen:                  false;
-    width:                       500px;
+    width:                       350px;
     x-offset:                    0px;
     y-offset:                    0px;
 
@@ -36,7 +36,7 @@ window {
     margin:                      0px;
     padding:                     0px;
     border:                      0px solid;
-    border-radius:               10px;
+    border-radius:               0px;
     border:                      1px solid;
     border-color:                @border;
     cursor:                      "default";
@@ -50,7 +50,7 @@ mainbox {
     margin:                      0px;
     padding:                     30px;
     border:                      0px solid;
-    border-radius:               10px;
+    border-radius:               0px;
     border-color:                @selected;
     background-color:            transparent;
     children:                    [ "inputbar", "listview" ];
@@ -63,7 +63,7 @@ inputbar {
     margin:                      0px;
     padding:                     0px;
     border:                      0px;
-    border-radius:               10px;
+    border-radius:               0px;
     border-color:                @selected;
     background-color:            transparent;
     text-color:                  @foreground;
@@ -79,14 +79,14 @@ textbox-prompt-colon {
     expand:                      false;
     str:                         "";
     padding:                     12.5px 16px 0px 13px;
-    border-radius:               10px;
+    border-radius:               0px;
     background-color:            @urgent;
     text-color:                  @background;
 }
 prompt {
     enabled:                     true;
     padding:                     12px;
-    border-radius:               10px;
+    border-radius:               0px;
     background-color:            @active;
     text-color:                  @background;
 }
@@ -97,7 +97,7 @@ message {
     margin:                      0px;
     padding:                     12px;
     border:                      0px solid;
-    border-radius:               10px;
+    border-radius:               0px;
     border-color:                @selected;
     background-color:            @background-alt;
     text-color:                  @foreground;
@@ -114,7 +114,7 @@ textbox {
 error-message {
     padding:                     12px;
     border:                      0px solid;
-    border-radius:               10px;
+    border-radius:               0px;
     border-color:                @selected;
     background-color:            @background;
     text-color:                  @foreground;
@@ -151,14 +151,14 @@ element {
     margin:                      0px;
     padding:                     10px 8px 10px -4px;
     border:                      0px solid;
-    border-radius:               10px;
+    border-radius:               0px;
     border-color:                @selected;
     background-color:            @background-alt;
     text-color:                  @foreground;
     cursor:                      pointer;
 }
 element-text {
-    font:                        "feather bold 32";
+    font:                        "Funnel Sans 16";
     background-color:            transparent;
     text-color:                  inherit;
     cursor:                      inherit;

@@ -17,6 +17,10 @@ hl.config({
 		layout = "dwindle",
 	},
 
+	dwindle = {
+		preserve_split = true,
+	},
+
 	decoration = {
 		rounding = 0,
 		rounding_power = 2,

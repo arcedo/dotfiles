@@ -5,6 +5,10 @@ local terminal = variables.terminal
 local menu = variables.menu
 local browser = variables.browser
 local filemanager = variables.filemanager
+local left = { x = -10, y = 0, relative = true }
+local down = { x = 0, y = 10, relative = true }
+local up = { x = 0, y = -10, relative = true }
+local right = { x = 10, y = 0, relative = true }
 
 -- Restart Hyprland
 hl.bind(mainMod .. " + SHIFT + R", hl.dsp.exec_cmd("hyprctl reload"))
@@ -41,7 +45,13 @@ hl.bind(mainMod .. " + F", hl.dsp.window.fullscreen())
 hl.bind(mainMod .. " + T", hl.dsp.window.float({ action = "toggle" }))
 hl.bind(mainMod .. " + C", hl.dsp.window.center())
 hl.bind(mainMod .. " + P", hl.dsp.window.pin())
-hl.bind(mainMod .. " + V", hl.dsp.layout("togglesplit"))
+hl.bind(mainMod .. " + V", function()
+	local layout = hl.get_config("general.layout")
+	if layout == "dwindle" then
+		hl.dispatch(hl.dsp.layout("togglesplit"))
+	end
+end, { description = "Toggle split direction" })
+--hl.bind(mainMod .. " + V", hl.dsp.layout("togglesplit"))
 
 -- Move focus
 hl.bind(mainMod .. " + H", hl.dsp.focus({ direction = "left" }))
@@ -56,10 +66,10 @@ hl.bind(mainMod .. " + SHIFT + K", hl.dsp.window.move({ direction = "up" }))
 hl.bind(mainMod .. " + SHIFT + J", hl.dsp.window.move({ direction = "down" }))
 
 -- Resize windows
-hl.bind(mainMod .. " + CTRL + H", hl.dsp.window.resize({ x = -20, y = 0 }))
-hl.bind(mainMod .. " + CTRL + L", hl.dsp.window.resize({ x = 20, y = 0 }))
-hl.bind(mainMod .. " + CTRL + K", hl.dsp.window.resize({ x = 0, y = -20 }))
-hl.bind(mainMod .. " + CTRL + J", hl.dsp.window.resize({ x = 0, y = 20 }))
+hl.bind(mainMod .. " + CTRL + H", hl.dsp.window.resize(left))
+hl.bind(mainMod .. " + CTRL + L", hl.dsp.window.resize(right))
+hl.bind(mainMod .. " + CTRL + K", hl.dsp.window.resize(up))
+hl.bind(mainMod .. " + CTRL + J", hl.dsp.window.resize(down))
 
 -- Workspaces
 for i = 1, 10 do
