@@ -39,7 +39,8 @@ setopt hist_find_no_dups
 export XDG_CURRENT_DESKTOP=Hyprland
 export XDG_SESSION_TYPE=wayland
 export PATH=$HOME/.local/bin:$PATH
-export $(dbus-launch)
+#export $(dbus-launch)
+#export DBUS_SESSION_BUS_ADDRESS="unix:path=$XDG_RUNTIME_DIR/bus"
 export NSS_USE_SHARED_DB=ENABLED
 export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/keyring/ssh"
 export DOCKER_HOST=unix:///var/run/docker.sock
@@ -53,10 +54,16 @@ esac
 # pnpm end
 
 # fastfetch
-if [[ $- == *i* ]]; then
-    fastfetch
-fi
+#if [[ $- == *i* ]]; then
+#    fastfetch
+#fi
 
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+# opencode
+export PATH=/home/arcedo/.opencode/bin:$PATH
+
+# Aliases
+alias projects='cd ~/Documents/projects/'
+alias dotfiles='cd ~/Documents/dotfiles/'
+alias academic='cd ~/Documents/academic/'
+alias cs-sep-26='cd ~/Documents/academic/enginyeria_informatica/uoc/sep_2026/'
+alias usetmux='cat ~/.config/tmux/usage.md'

@@ -183,4 +183,7 @@ return {
       },
     },
   },
+  {
+    "mfussenegger/nvim-dap",
+  },
 }

@@ -14,12 +14,30 @@ vim.api.nvim_create_autocmd("BufWritePre", {
   end,
 })
 
-vim.api.nvim_create_autocmd("FileType", {
+--[[vim.api.nvim_create_autocmd("FileType", {
   pattern = "c",
   callback = function()
     vim.bo.tabstop = 4
     vim.bo.shiftwidth = 4
     vim.bo.softtabstop = 4
     vim.bo.expandtab = true
+  end,
+})]]
+
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = "asm",
+  callback = function()
+    vim.opt_local.tabstop = 3
+    vim.opt_local.shiftwidth = 3
+    vim.opt_local.softtabstop = 3
+    vim.opt_local.expandtab = true
+  end,
+})
+
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = "typst",
+  callback = function()
+    vim.opt_local.spell = true
+    vim.opt_local.spelllang = "ca,es,en"
   end,
 })
